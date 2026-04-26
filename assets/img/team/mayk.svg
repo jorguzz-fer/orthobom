@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4DDD9"/>
+      <stop offset="100%" stop-color="#E8C97A"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" fill="url(#mg)"/>
+  <circle cx="120" cy="100" r="42" fill="#fff" opacity=".85"/>
+  <path d="M50 230 C50 175 80 150 120 150 C160 150 190 175 190 230 Z" fill="#fff" opacity=".85"/>
+  <text x="120" y="218" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5A1F1F">Dr. Mayk Coelho</text>
+</svg>
