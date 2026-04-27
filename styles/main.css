@@ -119,7 +119,7 @@ p { margin: 0 0 1em; }
   color: var(--brown-deep); font-weight: 700;
 }
 .brand:hover { color: var(--brown-deep); }
-.brand img { height: 77px; width: auto; }
+.brand img { height: 77px; width: auto; max-width: none; flex-shrink: 0; }
 .brand-text { display: none; }
 
 .nav-toggle {
