@@ -16,7 +16,7 @@
   --radius: 14px;
   --radius-lg: 22px;
   --container: 1180px;
-  --header-h: 76px;
+  --header-h: 96px;
 }
 
 * { box-sizing: border-box; }
@@ -119,16 +119,8 @@ p { margin: 0 0 1em; }
   color: var(--brown-deep); font-weight: 700;
 }
 .brand:hover { color: var(--brown-deep); }
-.brand img { width: 48px; height: 48px; }
-.brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-eyebrow {
-  font-size: .65rem; letter-spacing: .25em; text-transform: uppercase;
-  color: var(--gold-dark); font-family: 'Inter', sans-serif;
-}
-.brand-name {
-  font-family: 'Playfair Display', serif; font-weight: 800;
-  font-size: 1.4rem; color: var(--brown-deep); margin-top: 2px;
-}
+.brand img { height: 77px; width: auto; }
+.brand-text { display: none; }
 
 .nav-toggle {
   display: none; margin-left: auto;
