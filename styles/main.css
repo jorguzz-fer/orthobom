@@ -387,6 +387,12 @@ p { margin: 0 0 1em; }
   gap: 2rem; margin-bottom: 2rem;
 }
 .brand-footer { color: #fff; }
+/* Logo no rodapé escuro: tratamento TEMPORÁRIO. O PNG atual do logo não tem fundo
+   transparente, então ele é apresentado sobre uma plaquinha branca para ficar legível.
+   TODO(cliente/Claude-Design): substituir por versão do logo em fundo transparente
+   (branca/preta) e então remover este fundo branco. */
+.brand-footer { display: inline-block; background: #fff; padding: .5rem .8rem; border-radius: 10px; }
+.brand-footer img { height: 60px; width: auto; max-width: none; }
 .brand-footer .brand-eyebrow { color: var(--gold-light); }
 .brand-footer .brand-name { color: #fff; }
 .plain { list-style: none; padding: 0; margin: 0; }
