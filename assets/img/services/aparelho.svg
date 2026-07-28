@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#A6822F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M8 18 Q24 8 40 18" />
-  <path d="M8 30 Q24 40 40 30" />
-  <line x1="14" y1="20" x2="14" y2="30"/>
-  <line x1="20" y1="22" x2="20" y2="30"/>
-  <line x1="28" y1="22" x2="28" y2="30"/>
-  <line x1="34" y1="20" x2="34" y2="30"/>
-  <path d="M8 18 L8 30" />
-  <path d="M40 18 L40 30" />
-  <line x1="6" y1="24" x2="42" y2="24" stroke="#E8C97A" stroke-width="2"/>
+  <path d="M8 18 Q24 8 40 18"></path>
+  <path d="M8 30 Q24 40 40 30"></path>
+  <line x1="14" y1="20" x2="14" y2="30"></line>
+  <line x1="20" y1="22" x2="20" y2="30"></line>
+  <line x1="28" y1="22" x2="28" y2="30"></line>
+  <line x1="34" y1="20" x2="34" y2="30"></line>
+  <path d="M8 18 L8 30"></path>
+  <path d="M40 18 L40 30"></path>
+  <line x1="6" y1="24" x2="42" y2="24" stroke="#E8C97A" stroke-width="2"></line>
 </svg>
