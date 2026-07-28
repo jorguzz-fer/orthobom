@@ -1,25 +1,58 @@
 (() => {
   'use strict';
 
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.getElementById('menu-principal');
-
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  // Menu mobile
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu-principal');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const aberto = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(aberto));
+      toggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
     });
-
-    nav.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Abrir menu');
+    menu.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
       });
     });
   }
 
-  const yearEl = document.getElementById('ano');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  // Carrossel do hero
+  const slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+  const dots = Array.prototype.slice.call(document.querySelectorAll('.hero-dots button'));
+  let atual = 0;
+  let timer = null;
+
+  function mostrar(i) {
+    atual = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === atual));
+    dots.forEach((d, k) => d.classList.toggle('is-active', k === atual));
+  }
+  function iniciar() {
+    clearInterval(timer);
+    if (slides.length > 1) timer = setInterval(() => mostrar(atual + 1), 6000);
+  }
+  dots.forEach((d, i) => d.addEventListener('click', () => { mostrar(i); iniciar(); }));
+  if (slides.length) iniciar();
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearInterval(timer); else iniciar();
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const botao = item.querySelector('.faq-q');
+    const sinal = item.querySelector('.faq-sign');
+    if (!botao) return;
+    botao.addEventListener('click', () => {
+      const aberto = item.classList.toggle('is-open');
+      botao.setAttribute('aria-expanded', String(aberto));
+      if (sinal) sinal.textContent = aberto ? '–' : '+';
+    });
+  });
+
+  // Ano no rodapé
+  const ano = document.getElementById('ano');
+  if (ano) ano.textContent = String(new Date().getFullYear());
 })();
